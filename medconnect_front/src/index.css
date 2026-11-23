@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* MedConnect theme tokens — Tailwind v4 auto-generates utilities
+   like bg-brand, text-brand, text-ink from these --color-* vars */
+@theme {
+  --color-brand: #0d9488;
+  --color-brand-dark: #0f766e;
+  --color-brand-darker: #115e59;
+  --color-brand-light: #ccfbf1;
+  --color-brand-surface: #f0fdfa;
+  --color-ink: #0f2e3d;
+  --color-ink-soft: #5b7280;
+
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Toast: slides down from above the screen and settles under the navbar */
+@keyframes slide-down {
+  from {
+    transform: translate(-50%, -120%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.35s ease-out;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: #ffffff;
+}

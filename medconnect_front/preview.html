@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedConnect — Landing Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: { DEFAULT: '#0d9488', dark: '#0f766e', darker: '#115e59', light: '#ccfbf1', surface: '#f0fdfa' },
+            ink: { DEFAULT: '#0f2e3d', soft: '#5b7280' },
+          },
+        },
+      },
+    }
+  </script>
+  <style> body { font-family: 'Inter', system-ui, sans-serif; } </style>
+</head>
+<body class="bg-white text-ink">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-2">
+        <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-6 4 12 2-6h4"/></svg>
+        </span>
+        <span class="text-xl font-bold text-ink">MedConnect</span>
+      </div>
+      <ul class="hidden items-center gap-8 text-sm font-medium text-ink-soft md:flex">
+        <li class="text-brand">Home</li><li>About Us</li><li>Features</li><li>How It Works</li><li>Contact</li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <a class="rounded-lg border border-brand px-4 py-2 text-sm font-semibold text-brand hover:bg-brand-surface">Log In</a>
+        <a class="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24">
+      <div>
+        <span class="inline-block rounded-full bg-brand-light px-4 py-1 text-xs font-semibold tracking-wide text-brand-darker">CARE THAT CONNECTS</span>
+        <h1 class="mt-5 text-5xl font-extrabold leading-tight text-ink md:text-6xl">Healthcare,<br /><span class="text-brand">Simplified.</span></h1>
+        <p class="mt-5 max-w-md text-lg text-ink-soft">Book appointments, consult trusted doctors, and manage your health — all in one place.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a class="inline-flex items-center gap-2 rounded-lg bg-brand px-6 py-3 font-semibold text-white shadow-sm hover:bg-brand-dark">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Book Appointment
+          </a>
+          <a class="inline-flex items-center gap-2 rounded-lg border border-brand px-6 py-3 font-semibold text-brand hover:bg-brand-surface">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+            Find a Doctor
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -right-10 -top-10 h-80 w-80 rounded-full bg-brand-light/70 md:h-96 md:w-96"></div>
+        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=900&q=80" alt="Doctor consulting a patient" class="relative z-10 w-full rounded-3xl object-cover shadow-xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE CARDS -->
+  <section class="mx-auto -mt-6 max-w-7xl px-6">
+    <div class="grid gap-6 rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-100 md:grid-cols-4">
+      <div class="text-center md:text-left"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-light text-brand md:mx-0"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/></svg></span><h3 class="mt-4 font-semibold text-ink">Verified Doctors</h3><p class="mt-1 text-sm text-ink-soft">Consult with experienced and trusted professionals.</p></div>
+      <div class="text-center md:text-left"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-light text-brand md:mx-0"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h3 class="mt-4 font-semibold text-ink">Easy Booking</h3><p class="mt-1 text-sm text-ink-soft">Book appointments in just a few clicks.</p></div>
+      <div class="text-center md:text-left"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-light text-brand md:mx-0"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3 class="mt-4 font-semibold text-ink">Save Time</h3><p class="mt-1 text-sm text-ink-soft">Skip the waiting room and consult online.</p></div>
+      <div class="text-center md:text-left"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-light text-brand md:mx-0"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><h3 class="mt-4 font-semibold text-ink">Secure & Private</h3><p class="mt-1 text-sm text-ink-soft">Your data is safe and protected.</p></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="mx-auto max-w-7xl px-6 py-20">
+    <p class="text-center text-sm font-semibold tracking-widest text-brand">HOW IT WORKS</p>
+    <h2 class="mt-2 text-center text-3xl font-bold text-ink">Your Health in 4 Simple Steps</h2>
+    <div class="mx-auto mt-4 h-1 w-16 rounded bg-brand"></div>
+    <div class="mt-14 grid gap-10 md:grid-cols-4">
+      <div class="text-center"><div class="relative mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-surface text-brand"><svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 21v-1a6 6 0 0 1 6-6h0a6 6 0 0 1 4 1.5M18 8v6M15 11h6"/></svg><span class="absolute -bottom-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">1</span></div><h3 class="mt-6 font-semibold text-ink">Create Account</h3><p class="mt-1 text-sm text-ink-soft">Sign up and create your account.</p></div>
+      <div class="text-center"><div class="relative mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-surface text-brand"><svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg><span class="absolute -bottom-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">2</span></div><h3 class="mt-6 font-semibold text-ink">Find a Doctor</h3><p class="mt-1 text-sm text-ink-soft">Search and choose the right doctor.</p></div>
+      <div class="text-center"><div class="relative mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-surface text-brand"><svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span class="absolute -bottom-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">3</span></div><h3 class="mt-6 font-semibold text-ink">Book Appointment</h3><p class="mt-1 text-sm text-ink-soft">Select date &amp; time that suits you.</p></div>
+      <div class="text-center"><div class="relative mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-surface text-brand"><svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><span class="absolute -bottom-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">4</span></div><h3 class="mt-6 font-semibold text-ink">Get Consulted</h3><p class="mt-1 text-sm text-ink-soft">Visit or consult online and stay healthy.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-brand">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-12 text-center md:flex-row md:text-left">
+      <div><h2 class="text-2xl font-bold text-white">Ready to take care of your health?</h2><p class="mt-1 text-brand-light">Create your free account and book your first appointment today.</p></div>
+      <a class="rounded-lg bg-white px-6 py-3 font-semibold text-brand-dark hover:bg-brand-surface">Get Started</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-100 bg-brand-surface">
+    <div class="mx-auto grid max-w-7xl gap-8 px-6 py-12 md:grid-cols-4">
+      <div>
+        <div class="flex items-center gap-2"><span class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-6 4 12 2-6h4"/></svg></span><span class="text-lg font-bold text-ink">MedConnect</span></div>
+        <p class="mt-3 text-sm text-ink-soft">Your trusted partner in better healthcare.</p>
+      </div>
+      <div><h4 class="text-sm font-semibold text-ink">Quick Links</h4><ul class="mt-3 space-y-2 text-sm text-ink-soft"><li>Home</li><li>About Us</li><li>Features</li><li>How It Works</li></ul></div>
+      <div><h4 class="text-sm font-semibold text-ink">Contact Us</h4><ul class="mt-3 space-y-2 text-sm text-ink-soft"><li>support@medconnect.com</li><li>+91 98765 43210</li><li>Chennai, India</li></ul></div>
+      <div><h4 class="text-sm font-semibold text-ink">Follow Us</h4><div class="mt-3 flex gap-3"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-light text-sm font-semibold text-brand">F</span><span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-light text-sm font-semibold text-brand">I</span><span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-light text-sm font-semibold text-brand">X</span><span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-light text-sm font-semibold text-brand">in</span></div></div>
+    </div>
+    <div class="border-t border-teal-100 py-4 text-center text-xs text-ink-soft">© 2026 MedConnect. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
